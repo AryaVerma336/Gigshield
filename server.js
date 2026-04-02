@@ -10,10 +10,15 @@ const app = express();
 app.disable('x-powered-by');
 const PORT = process.env.PORT || 3000;
 
-app.use(helmet({
-    contentSecurityPolicy: false,
-}));
-console.log('GIGSHIELD_VERSION: 1.1.0_CSP_DISABLED');
+// Force cache-busting headers to prevent "Zombie" versions of the site
+app.use((req, res, next) => {
+    res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+    res.set('Pragma', 'no-cache');
+    res.set('Expires', '0');
+    next();
+});
+
+console.log('GIGSHIELD_VERSION: 1.2.0_SECURITY_CLEARED');
 app.use(compression());
 app.use(cors());
 app.use(express.json());
