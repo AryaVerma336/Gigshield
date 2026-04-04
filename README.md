@@ -1,4 +1,4 @@
-# GigShield
+# Trinetra
 
 AI-powered parametric income insurance platform for gig delivery partners in India.
 
@@ -11,7 +11,7 @@ AI-powered parametric income insurance platform for gig delivery partners in Ind
 
 ## 🚀 One-Click Deployment (Railway)
 
-GigShield is pre-configured for direct deployment on [Railway.app](https://railway.app/).
+Trinetra is pre-configured for direct deployment on [Railway.app](https://railway.app/).
 
 ### Quick Deploy:
 1. Connect your GitHub repository to Railway.

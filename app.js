@@ -1,5 +1,5 @@
-/* ── GIGSHIELD APP CORE (v2.0.2) ── */
-console.log('GIGSHIELD_APP: Initializing v2.0.2 ...');
+/* ── TRINETRA APP CORE (v2.0.2) ── */
+console.log('TRINETRA_APP: Initializing v2.0.2 ...');
 
 /* ── STORAGE ── */
 const S = {
@@ -322,7 +322,7 @@ async function loadDemo(type) {
 }
 
 async function loadAdmin() {
-    const adminUser = { name: 'Admin User', phone: '0000000000', platform: 'GigShield HQ', zone: 'Connaught Place, Delhi', upi: 'admin@gigshield', pid: 'ADMIN-001' };
+    const adminUser = { name: 'Admin User', phone: '0000000000', platform: 'Trinetra HQ', zone: 'Connaught Place, Delhi', upi: 'admin@trinetra', pid: 'ADMIN-001' };
     showToast('Entering Admin Mode...', 'warn', 2000);
     setTimeout(() => {
         launchApp(adminUser);
@@ -573,7 +573,7 @@ function runSim() {
             <div style="font-size:28px;font-family:var(--fh);color:#fca5a5;">₹${annualRisk.toLocaleString('en-IN')}</div>
             <div style="font-size:12px;color:rgba(255,255,255,.5);margin-top:4px">~${riskDays} bad-weather days/year · ₹${earn} daily earnings</div>
         </div>
-        <div style="font-size:11px;color:rgba(255,255,255,.4);letter-spacing:2px;text-transform:uppercase;font-family:var(--fm);margin-bottom:10px;">GigShield Plans</div>
+        <div style="font-size:11px;color:rgba(255,255,255,.4);letter-spacing:2px;text-transform:uppercase;font-family:var(--fm);margin-bottom:10px;">Trinetra Plans</div>
         ${plans.map(p => `
         <div style="padding:12px 14px;border:1px solid rgba(255,255,255,.08);border-radius:11px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;">
             <div>

@@ -18,7 +18,7 @@ app.use((req, res, next) => {
     next();
 });
 
-console.log('GIGSHIELD_VERSION: 1.2.0_SECURITY_CLEARED');
+console.log('TRINETRA_VERSION: 1.2.0_SECURITY_CLEARED');
 app.use(compression());
 app.use(cors());
 app.use(express.json());
@@ -195,7 +195,7 @@ app.post('/api/ai/chat', async (req, res) => {
         return res.status(400).json({ error: "No Gemini API key provided." });
     }
 
-    const systemPrompt = `You are GigShield AI, a helpful assistant for an AI-powered parametric income insurance platform for gig delivery workers in India (Zomato, Swiggy, Blinkit, Amazon). 
+    const systemPrompt = `You are Trinetra AI, a helpful assistant for an AI-powered parametric income insurance platform for gig delivery workers in India (Zomato, Swiggy, Blinkit, Amazon). 
 The platform protects workers from income loss due to extreme weather (rain, heat, AQI), platform outages, and curfews.
 Plans: Basic ₹29/week (₹500 payout), Standard ₹59/week (₹1,200 payout), Pro ₹99/week (₹2,500 payout).
 Payouts are automatic via UPI within 90 seconds. AI fraud detection uses GPS, cell tower, motion sensor, and platform activity signals.
@@ -299,7 +299,7 @@ app.get('/api/weather/live', async (req, res) => {
         // 2. Reverse geocode using Nominatim (OSM, free, no key)
         const geoUrl = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}&zoom=14&addressdetails=1`;
         const geoRes = await fetch(geoUrl, {
-            headers: { 'User-Agent': 'GigShield-App/1.0' }
+            headers: { 'User-Agent': 'Trinetra-App/1.0' }
         });
         const geoData = await geoRes.json();
         const addr = geoData.address || {};
@@ -363,7 +363,7 @@ if (!process.env.GEMINI_API_KEY) {
 }
 
 const server = app.listen(PORT, '0.0.0.0', () => {
-    console.log(`GigShield backend listening on port ${PORT} (hosting: 0.0.0.0)`);
+    console.log(`Trinetra backend listening on port ${PORT} (hosting: 0.0.0.0)`);
     console.log('Production security (helmet) and compression active.');
 });
 
